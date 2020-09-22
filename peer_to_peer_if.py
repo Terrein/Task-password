@@ -15,6 +15,6 @@ city = input('Введите город: ').capitalize()
 if city in cities:
     index_num = cities.index(city) #определяю индеск найденого члена списка
     print(
-        f"Турист {users[index_num]['name']} возраст {users[index_num]['age']}. Посетил город {tourists[index_num]['city']}")
+        f"Турист {tourists[index_num]['user']['name']} возраст {tourists[index_num]['user']['age']}. Посетил город {tourists[index_num]['city']}")
 else:
     print("Город не найден")
