@@ -11,7 +11,7 @@ tourists = [{'user': users[0], 'city': cities[0]},
  #Введенная переменная приводится к виду членов словаря cities
 city = input('Введите город: ').capitalize()
 
-#Проверяется сожержится ли горд в списке
+#Проверяется содержится ли горд в списке
 if city in cities:
     index_num = cities.index(city) #определяю индеск найденого члена списка
     print(
