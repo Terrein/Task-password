@@ -10,7 +10,7 @@ tourists = [{'user': users[0], 'city': cities[0]},
 
 # Введенная переменная приводится к виду членов словаря cities
 city = input('Введите город: ').strip().capitalize()
-
+# Проверка введенного города  на присутствие в списке tourists
 if city in cities:
     for tourist in tourists:
         if tourist['city'] == city:
@@ -19,13 +19,3 @@ if city in cities:
             print(f"Турист {tourist['user']['name']} не посещал {city}")           
 else:
     print("Город не найден")     
-
-
-  # Проверяется содержится ли горд в списке
-"""if city in cities:
-    index_num = cities.index(city)  # определяю индеск найденого члена списка
-    print(
-        f"Турист {tourists[index_num]['user']['name']} возраст {tourists[index_num]['user']['age']}. Посетил город {tourists[index_num]['city']}")
-else:
-    print("Город не найден") 
-  """
