@@ -18,4 +18,4 @@ if city in cities:
         else:
             print(f"Турист {tourist['user']['name']} не посещал {city}")           
 else:
-    print("Город не найден")     
+    print("Город не найден")
