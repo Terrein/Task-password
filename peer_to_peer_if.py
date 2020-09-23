@@ -1,11 +1,11 @@
-cities = ['Орел','Москва', 'Париж', 'Лондон']
+cities = ['Москва', 'Париж', 'Лондон']
 
 users = [{'name': 'Иван', 'age': 35},
          {'name': 'Мария', 'age': 22},
          {'name': 'Соня', 'age': 20}]
 
-tourists = [{'user': users[1], 'city': cities[1]},
-            {'user': users[0], 'city': cities[0]},
+tourists = [{'user': users[0], 'city': cities[0]},
+            {'user': users[1], 'city': cities[1]},
             {'user': users[2], 'city': cities[2]}]
 
 # Введенная переменная приводится к виду членов словаря cities
