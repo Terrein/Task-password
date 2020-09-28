@@ -4,14 +4,14 @@ def get_absolute_url(url, *args, **kwargs):
     :param *args: позиционный(е) аргумент(ы). Возможен ввод любого кол-ва аргументов
     :param **kwargs: именованный(е) аргумент(ы). Возможен ввод любого кол-ва аргументов
     """  
-    z = ""
+    str_url = ""
     for el in args:
-        z += el.strip() + "/"
-    z = z + "?"
+        str_url += el.strip() + "/"
+    str_url = str_url + "?"
     for k, v in kwargs.items():
-        z += ((k.strip()) + "=" + str(v).strip() + "&")
-    z = z[:-1]
-    return(url + "/" + z)
+        str_url += ((k.strip()) + "=" + str(v).strip() + "&")
+    str_url = str_url[:-1]
+    return(url + "/" + str_url)
 
 # https://www.da-office.ru/store/zashitnii-kovriki-pod-kreslo/bsl-100-x-120-sm-1-2-mm-matovyy-pesok-polipropilen/?utm_source=YM&utm_medium=cpc&utm_content=bsl-100-x-120-sm-1-2-mm-matovyy-pesok-polipropilen&utm_campaign=zashitnii-kovriki-pod-kreslo&r1=&ymclid=16012405962867952112500007
 #Тестовый вывод
