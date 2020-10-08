@@ -83,7 +83,7 @@ for log in log_list:
     for el in log:
         if el == 'item_cost':
             cost = int(log['item_cost'])
-            if cost < max_cost:
+            if cost <= max_cost:
                 item_list.append({'item':log['item'],'item_cost':log['item_cost']})
 # Декаративная строчка для красоты
 print(f"Следующие товары ниже стоимости {max_cost} :")
