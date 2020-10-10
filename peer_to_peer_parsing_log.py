@@ -102,8 +102,7 @@ for log in log_list:
             cost = int(log['item_cost'])
             if cost < max_cost:
                 item_list_2.append(log['item'])
-item_list_2_v = set(item_list_2)
 print("Товары дешевле 13000")
 print("---------------------")
-for item in item_list_2_v:
+for item in set(item_list_2):
     print(item)
