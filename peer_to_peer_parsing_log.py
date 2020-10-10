@@ -90,6 +90,7 @@ print(f"Следующие товары ниже стоимости {max_cost} :
 # Вывод товаров и стоимостей
 for item_el in item_list:
     print(f"Товар {item_el['item']} по цене {item_el['item_cost']}")
+print('                                                     ')
 
 # второй вариант решения задания упрощеный с выводом названий товаров у которых цена меньше 13000
 # Выводятся товары без повторений 
@@ -101,4 +102,8 @@ for log in log_list:
             cost = int(log['item_cost'])
             if cost < max_cost:
                 item_list_2.append(log['item'])
-print(set(item_list_2))
+item_list_2_v = set(item_list_2)
+print("Товары дешевле 13000")
+print("---------------------")
+for item in item_list_2_v:
+    print(item)
