@@ -106,3 +106,43 @@ print("Товары дешевле 13000")
 print("---------------------")
 for item in set(item_list_2):
     print(item)
+print("                                      ")    
+
+# Еще одно решение парсинга логов
+
+log2 = """name:Иван;gender:m;item:Часы;item_cost:9800
+name:Иван;gender:m;item:Фитнес-браслет;item_cost:12300
+name:Иван;gender:m;item:Кофемашина;item_cost:23500
+name:Петр;gender:m;item:Часы;item_cost:9800
+name:Петр;gender:m;item:Фитнес-браслет;item_cost:12300
+name:Петр;gender:m;item:Айфон;item_cost:77900
+name:Петр;gender:m;item:Чехол для телефона;item_cost:350
+name:Петр;gender:m;item:Кофемашина;item_cost:23500
+name:Дарья;gender:m;item:Айфон;item_cost:77900
+name:Марья;gender:m;item:Кофемашина;item_cost:23500
+name:Юлия;gender:m;item:Фитнес-браслет;item_cost:12300"""
+
+total=[]
+elements = log2.split('\n')
+for element in elements:
+        dict_new={}
+        new_element=element.split(';')
+        for el in new_element:
+            new_el = el.split(':')
+            dict_el = {new_el[i]: new_el[i+1] for i in range(0,len(new_el),2)}
+            dict_new.update(dict_el)
+        total.append(dict_new)
+
+
+item_list_2 = []
+max_cost = 13000
+for log2 in total:
+    for el in log2:
+        if el == 'item_cost':
+            cost = int(log2['item_cost'])
+            if cost < max_cost:
+                item_list_2.append(log2['item'])
+print("Товары дешевле 13000")
+print("---------------------")
+for item in set(item_list_2):
+    print(item)
